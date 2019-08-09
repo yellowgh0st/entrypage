@@ -9,8 +9,17 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
+        name: `portable-network-graphics`,
         path: `${__dirname}/src/atoms/png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        name: `scalable-vector-graphics`,
+        rule: {
+          include: `${__dirname}/src/atoms/svg`
+        },
       },
     },
     `gatsby-transformer-sharp`,
