@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Aldana`,
-    description: `Empowering The Stellar Network. To infinity and beyond.`,
+    description: `Empowering The Stellar Network.`,
     author: `@ylwghst`,
   },
   plugins: [
@@ -22,17 +22,21 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/data/`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `gatsby-aldana-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
       //icon: `atoms/png/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
